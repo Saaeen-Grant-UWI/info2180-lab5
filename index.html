@@ -5,22 +5,25 @@
 		<title>World Database Lookup</title>
 
 		<!-- you can modify this as needed or to your preference -->
-		<link href="world.css" type="text/css" rel="stylesheet" />
-
+		<link rel="stylesheet" href="style.css">
 		<!-- you write this -->
 		<script src="world.js" type="text/javascript"></script>
 	</head>
 
 	<body>
 		<header>
+			<img src="33r8_c9sz_221114.jpg" width="250px" alt="">
 			<h1>World Database Lookup</h1>
 		</header>
 
 		<main>
 			<div id="controls">
-				<label for="country">Country:</label>
+				<label for="country">Country</label>
 				<input id="country" type="search" name="country" placeholder="Enter country name" />
-				<button id="lookup">Lookup</button>
+				<div>
+					<button id="country-lookup">Country Lookup</button>
+					<button id="city-lookup">City Lookup</button>	
+				</div>
 			</div>
 			
 			<div id="result">
