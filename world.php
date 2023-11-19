@@ -20,8 +20,23 @@ $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 
 ?>
-<ul>
-<?php foreach ($results as $row): ?>
-  <li><?= $row['name'] . ' is ruled by ' . $row['head_of_state']; ?></li>
-<?php endforeach; ?>
-</ul>
+
+<?php
+  $tableHeaders = ["name","continent","independence_year","head_of_state"];
+?>
+
+<table>
+  <tr>
+    <?php foreach ($tableHeaders as $header) { ?>
+      <th><?=$header?></th>
+    <?php } ?>  
+  </tr>
+  <?php foreach ($results as $result) { ?>
+  <tr>
+    <?php foreach ($tableHeaders as $key => $value) { ?>
+          <td><?=$result[$value]?></td>
+    <?php } ?>
+  </tr>
+  <?php } ?>
+
+</table>
